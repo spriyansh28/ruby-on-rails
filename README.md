@@ -1,24 +1,13 @@
-# README
+# Online Posts Manager
+> This is a Ruby on Rails web application that allows users to create and handle their posts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Features
+- Posts
+- Tech News
+- Real time chat engine for comments with user ids
+- Admin privilages to user with password protected accounts.
+- Secutrity to user posts which can only be posted and edited by the author.
+- Draft and post mode abailablity.
+- Drag and drop GUI.
+- API for lates news.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
