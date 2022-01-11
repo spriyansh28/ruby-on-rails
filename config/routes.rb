@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :technologies
+  resources :information
   get 'pages/home'
   get 'pages/about'
   get 'pages/contact'
