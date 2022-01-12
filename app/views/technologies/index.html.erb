@@ -1,0 +1,11 @@
+<h1>Tech news</h1>
+
+
+    <% @technologies.each do |tech| %>
+        <p><%= tech.title %></p>
+        <p><%= tech.subtitle %></[p]>
+        <p><%= tech.body %></p>
+        <%= image_tag tech.thumb_image if !tech.thumb_image.nil?%>
+    <% end %>
+
+
