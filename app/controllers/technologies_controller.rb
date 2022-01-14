@@ -24,7 +24,7 @@ class TechnologiesController < ApplicationController
     end
 
     def update
-        
+
         @technologies = Technology.find(params[:id])
 
         respond_to do |format|
@@ -34,7 +34,21 @@ class TechnologiesController < ApplicationController
             format.html { render :edit, status: :unprocessable_entity }
           end
         end
-      end
+    end
+
+    def show
+        @technology = Technology.find(params[:id]) 
+    end 
+ 
+    def destroy
+        @technology = Technology.find(params[:id]) 
+ 
+        @technology.destroy
+    
+        respond_to do |format|
+          format.html { redirect_to technologies_url, notice: "Tech news was successfully destroyed." }
+        end
+    end
 
     private
 

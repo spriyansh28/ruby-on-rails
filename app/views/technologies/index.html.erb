@@ -1,11 +1,15 @@
 <h1>Tech news</h1>
 
+<%= link_to 'Add new tech news to the site', new_technology_path %>
 
     <% @technologies.each do |tech| %>
         <p><%= tech.title %></p>
         <p><%= tech.subtitle %></[p]>
         <p><%= tech.body %></p>
         <%= image_tag tech.thumb_image if !tech.thumb_image.nil?%>
+        <td><%= link_to 'Show', tech %></td>
+        <td><%= link_to 'Edit', edit_technology_path(tech.id) %></td>
+        <td><%= link_to 'Delete', technology_path(tech), method: :delete, data: { confirm: 'Are you sure?' } %></td>   
     <% end %>
 
 
