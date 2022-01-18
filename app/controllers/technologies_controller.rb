@@ -1,4 +1,6 @@
 class TechnologiesController < ApplicationController
+  before_action :set_technology, only: %i[ show edit update destroy toggle_status]
+
     def index
         @technologies = Technology.all 
     end
@@ -20,7 +22,6 @@ class TechnologiesController < ApplicationController
     end
 
     def edit 
-        @technologies = Technology.find(params[:id])
     end
 
     def update
@@ -37,12 +38,9 @@ class TechnologiesController < ApplicationController
     end
 
     def show
-        @technology = Technology.find(params[:id]) 
     end 
  
-    def destroy
-        @technology = Technology.find(params[:id]) 
- 
+    def destroy 
         @technology.destroy
     
         respond_to do |format|
@@ -50,9 +48,24 @@ class TechnologiesController < ApplicationController
         end
     end
 
+
+  def toggle_status
+    
+    if @technology.draft?
+      @technology.published!
+    elsif @technology.published?
+      @technology.draft!
+    end
+    redirect_to technologies_url
+  end
+
     private
 
     def technology_params
         params.require(:technology).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+    end
+
+    def set_technology
+      @technology = Technology.find(params[:id])
     end
 end

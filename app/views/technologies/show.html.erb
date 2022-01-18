@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= image_tag @technology.main_image %>
+<%= image_tag @technology.main_image if !@technology.main_image.nil?%>
 </p>
 
 <h2>

@@ -7,6 +7,7 @@
         <p><%= tech.subtitle %></[p]>
         <p><%= tech.body %></p>
         <%= image_tag tech.thumb_image if !tech.thumb_image.nil?%>
+        <td><%= link_to tech.status, toggle_status_technology_path(tech)%></td>
         <td><%= link_to 'Edit', edit_technology_path(tech.id) %></td>
         <td><%= link_to 'Delete', technology_path(tech), method: :delete, data: { confirm: 'Are you sure?' } %></td>   
     <% end %>
