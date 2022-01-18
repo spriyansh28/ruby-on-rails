@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :users, path: '', path_names: {sing_in: 'login', sign_out: 'logout'}
+  
   resources :technologies, except: [:show] do
   	member do
   		get :toggle_status
