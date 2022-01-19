@@ -16,10 +16,15 @@
   <%= @technology.body %>
 </p>
 
+<h3> Technologies Used: </h3>
+<% @technology.items.each do |i|%>
+  <p><%= i.name %> </p>
+<% end %> 
+
+
 <%= link_to 'Edit', edit_technology_path(@technology) %> |
 <%= link_to 'Back', technologies_path %>
 
-#sessions
 <% if session[:source]%>
   <p> Visited from <%= session[:source] %> </p>
 <% end %>

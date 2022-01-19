@@ -37,3 +37,12 @@
   end
 
   puts "9 technologies created"
+
+  4.times do |item|
+    Item.create!(
+      name: "tech #{item}",
+      technology_id: Technology.last.id
+      )
+  end
+
+  puts "4 items created"
