@@ -7,6 +7,7 @@ class TechnologiesController < ApplicationController
 
     def new
         @technologies = Technology.new
+        3.times { @technologies.items.build }
     end
 
     def create
@@ -22,6 +23,7 @@ class TechnologiesController < ApplicationController
     end
 
     def edit 
+      @technologies = Technology.find(params[:id])
     end
 
     def update
@@ -62,7 +64,7 @@ class TechnologiesController < ApplicationController
     private
 
     def technology_params
-        params.require(:technology).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+        params.require(:technology).permit(:title, :subtitle, :body, :main_image, :thumb_image, items_attributes: [:name])
     end
 
     def set_technology

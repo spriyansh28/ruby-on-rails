@@ -1,6 +1,6 @@
 <h1>Pages#home</h1>
-<h2>Logged in as <%= current_user.first_name if current_user %>
- <%= current_user.last_name if current_user %></h2>
+<h2>Logged in as <%= current_user.first_name.upcase if current_user %>
+ <%= current_user.last_name.upcase if current_user %></h2>
 
 
 <p>Find me in app/views/pages/home.html.erb</p>
