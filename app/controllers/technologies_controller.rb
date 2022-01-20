@@ -1,8 +1,9 @@
 class TechnologiesController < ApplicationController
   before_action :set_technology, only: %i[ show edit update destroy toggle_status]
-
+  layout "technology"
     def index
         @technologies = Technology.all 
+        @page_title = "My Technologies"
     end
 
     def new
@@ -23,6 +24,7 @@ class TechnologiesController < ApplicationController
     end
 
     def edit 
+      @page_title = @technology.title
       @technologies = Technology.find(params[:id])
     end
 
@@ -40,6 +42,7 @@ class TechnologiesController < ApplicationController
     end
 
     def show
+      @page_title = @technology.title
     end 
  
     def destroy 
