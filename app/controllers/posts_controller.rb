@@ -1,13 +1,16 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy toggle_status]
-
+  layout "post"
+  
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+    @page_title = "My Posts"
   end
 
   # GET /posts/1 or /posts/1.json
   def show
+    @page_title = @post.title
   end
 
   # GET /posts/new
@@ -17,6 +20,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @page_title = @post.title
   end
 
   # POST /posts or /posts.json
