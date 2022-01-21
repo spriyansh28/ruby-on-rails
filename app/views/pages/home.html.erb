@@ -1,7 +1,10 @@
-<h1>Pages#home</h1>
-<h2>Logged in as <%= current_user.first_name.upcase if current_user %>
- <%= current_user.last_name.upcase if current_user %></h2>
-
-
-<p>Find me in app/views/pages/home.html.erb</p>
+   <main class="px-3">
+     <h1>Cover your page.</h1>
+     <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+     <p class="lead">
+        <p>Logged in as <%= current_user.first_name.upcase if current_user %>
+         <%= current_user.last_name.upcase if current_user %></h2></p>
+       <a href="<% link-to about_developer_path" class="btn btn-lg btn-secondary fw-bold border-white bg-white">About me</a>
+     </p>
+   </main>
 

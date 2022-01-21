@@ -3,7 +3,7 @@
 <p><%= technology.subtitle %></[p]>
 <p><%= technology.body %></p>
 <%= image_tag technology.thumb_image if !technology.thumb_image.nil?%>
-<td><%= link_to technology.status, toggle_status_technology_path(technology)%></td>
-<td><%= link_to 'Edit', edit_technology_path(technology.id) %></td>
-<td><%= link_to 'Delete', technology_path(technology), method: :delete, data: { confirm: 'Are you sure?' } %></td>   
+<td><%= link_to technology.status, toggle_status_technology_path(technology) if logged_in?(:site_admin) %></td>
+<td><%= link_to 'Edit', edit_technology_path(technology.id) if logged_in?(:site_admin) %></td>
+<td><%= link_to 'Delete', technology_path(technology), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>   
 

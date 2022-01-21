@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
+<%= link_to "New Post", new_post_path if logged_in?(:site_admin) %>
+
 
 <h1>Posts</h1>
 <%= render @posts %>
 
-<%= link_to 'New Post', new_post_path %>

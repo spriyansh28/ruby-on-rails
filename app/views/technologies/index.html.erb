@@ -1,6 +1,6 @@
 <h1>Tech news</h1>
 
-<%= link_to 'Add new tech news to the site', new_technology_path %>
+<%= link_to "Add new tech news to the site", new_technology_path if logged_in?(:site_admin) %>
 
     <%= render @technologies %>
 
