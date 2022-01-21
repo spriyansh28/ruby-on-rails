@@ -1,6 +1,19 @@
    <main class="px-3">
-     <h1>Cover your page.</h1>
-     <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+     <h1>Welcome</h1>
+     <p class="lead">This site is my introduction to web development.PostManager is an web application that allows users to create and handle their posts. The site has features like:
+     </p>
+     <div class="bullets">
+       <ul>
+       <li>Creating Posts</li>
+       <li>Creating Tech News</li>
+       <li>Real time chat engine for comments with user ids</li>     
+       <li>Admin privilages to user with password protected accounts.</li>
+       <li>Secutrity to user posts which can only be posted and edited by the author.</li>
+       <li>Draft and post mode abailablity.</li>
+       <li>Drag and drop GUI.</li>
+       <li>API for lates news.</li>
+     </ul>
+     </div>
      <p class="lead">
         <p>Logged in as <%= current_user.first_name.upcase if current_user %>
          <%= current_user.last_name.upcase if current_user %></h2></p>
