@@ -1,10 +1,15 @@
-    <p><%= post.title.upcase %></p>
-    <p> Posted <%= distance_of_time_in_words(post.created_at,Time.now) %> ago</p>
+<article class="blog-post">
+  <h2 class="blog-post-title"><%= post.title.upcase %></h2>
+    <p class="blog-post-meta">Posted <%= distance_of_time_in_words(post.created_at,Time.now) %> ago by <a href="#">Mark</a></p>
+
+    <%= link_to 'Show', post, class: "btn btn-light" %>
+    <% if logged_in?(:user) %>
+      <%= link_to 'Edit', edit_post_path(post), class: "btn btn-light" %>
+      <%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %>
+      <p><%= link_to post.status, toggle_status_post_path(post), class: "btn btn-light" %></p>
+    <% end %>
     <%= image_tag post.image if !post.image.nil? %>
     <p><%= post.body %></p>
-      <tr>
-      <td><%= link_to post.status, toggle_status_post_path(post)%></td>
-      <td><%= link_to 'Show', post %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+</article>
+
+

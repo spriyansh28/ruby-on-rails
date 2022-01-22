@@ -1,2 +1,3 @@
 <h1>Add new tech news to site.</h1>
+<%= link_to "Add new tech news to the site", new_technology_path if logged_in?(:site_admin) %>
 <%= render 'form', technologies: @technologies %>  
