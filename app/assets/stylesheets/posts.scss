@@ -1,5 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import "font-awesome";
 
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -126,4 +127,8 @@
    }
    .col-md-4{
      align-self: right;
+   }
+
+   .social-media li {
+    font-size: 3rem;
    }
