@@ -1,7 +1,22 @@
-<p id="notice"><%= notice %></p>
-<%= link_to "New Post", new_post_path if logged_in?(:site_admin) %>
+    <div class="col-md-8">
+      <div class="d-grid gap-2 col-6 mx-auto">
+         <% if logged_in?(:user) %>
+           <%= link_to "New Post", new_post_path,class: "btn btn-primary" %>
+         <% end %>
+      </div>
+      <h2 class="pb-4 mb-4 fst-italic border-bottom">
+        Posts
+      </h2>
+
+      <%= render @posts %>
+
+      <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled">Newer</a>
+      </nav>
+
+    </div>
 
 
-<h1>Posts</h1>
-<%= render @posts %>
+
 
