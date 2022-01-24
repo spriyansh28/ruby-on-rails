@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy toggle_status]
   layout "post"
-  access all: [:show, :index], site_admin: {except: [:destroy, :new, :create, :update, :edit, 
-  :toggle_status]}, user: :all
+
 
 # one other option that might seem a bit weird is to put a group of roles in an array:
-access [:all, :user] => [:show, :index]
   
   # GET /posts or /posts.json
   def index
