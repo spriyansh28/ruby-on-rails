@@ -1,2 +1,14 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+ .float-center{
+    width: 40rem;
+    margin-left: 30rem;
+    float: none;
+    margin-bottom: 10px;
+ } 
+
+ .d-grid > .btn{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+   }

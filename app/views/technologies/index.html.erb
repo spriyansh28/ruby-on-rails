@@ -1,7 +1,18 @@
-<h1>Tech news</h1>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+   
+            <%= link_to "Add new tech news to the site", new_technology_path if logged_in?(:site_admin) %>
+        
+            <%= render @technologies %>
 
-<%= link_to "Add new tech news to the site", new_technology_path if logged_in?(:site_admin) %>
-
-    <%= render @technologies %>
-
+            <div class="d-grid gap-2 col-6 mx-auto">
+               <% if logged_in?(:user) %>
+                 <%= link_to "Add news to site", new_technology_path,class: "btn btn-primary" %>
+               <% end %>
+            </div>
+            
+        </div>      
+     </div>
+</div>
 
