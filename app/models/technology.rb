@@ -5,6 +5,10 @@ class Technology < ApplicationRecord
 
     validates_presence_of :title, :body, :thumb_image, :main_image 
 
+    def by_position
+        order("position ASC")
+    end
+
     after_initialize :set_defaults
 
     def set_defaults
