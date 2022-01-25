@@ -1,7 +1,23 @@
-<h1>Pages#home</h1>
-<h2>Logged in as <%= current_user.first_name.upcase if current_user %>
- <%= current_user.last_name.upcase if current_user %></h2>
-
-
-<p>Find me in app/views/pages/home.html.erb</p>
+   <main class="px-3">
+     <h1>Welcome</h1>
+     <p class="lead">This site is my introduction to web development.PostManager is an web application that allows users to create and handle their posts. The site has features like:
+     </p>
+     <div class="bullets">
+       <ul>
+       <li>Creating Posts</li>
+       <li>Creating Tech News</li>
+       <li>Real time chat engine for comments with user ids</li>     
+       <li>Admin privilages to user with password protected accounts.</li>
+       <li>Secutrity to user posts which can only be posted and edited by the author.</li>
+       <li>Draft and post mode abailablity.</li>
+       <li>Drag and drop GUI.</li>
+       <li>API for lates news.</li>
+     </ul>
+     </div>
+     <p class="lead">
+        <p>Logged in as <%= current_user.first_name.upcase if current_user %>
+         <%= current_user.last_name.upcase if current_user %></h2></p>
+       <a href="<% link-to about_developer_path" class="btn btn-lg btn-secondary fw-bold border-white bg-white">About me</a>
+     </p>
+   </main>
 

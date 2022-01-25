@@ -1,5 +1,6 @@
 class TechnologiesController < ApplicationController
   before_action :set_technology, only: %i[ show edit update destroy toggle_status]
+
   layout "technology"
     def index
         @technologies = Technology.all 

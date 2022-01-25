@@ -2,6 +2,7 @@
 <html>
   <head>  
     <title><%= @page_title %></title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,17 +12,32 @@
   </head>
 
   <body>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-  <%= render "shared/nav" %>
+    <header>
+       <%= render "shared/technology_nav" %>
+   </header>
 
-  <%= authentication_helper %>
+    <main>
 
-  <%= yield %>
+      <%= yield %>
+
+    </main>
+
+
+   <footer class="text-muted py-5">
+     <div class="container">
+       <p class="float-end mb-1">
+         <a href="#">Back to top</a>
+       </p>
+       <p  class="float-center mb-1">
+        @2021 <a href="https://github.com/spriyansh28/ruby-on-rails" class="text-black">PostManager</a>,
+        by <%= link_to 'Priyansh Saini', about_developer_path, class: "text-black" %> .
+        </p>
+      </div>
+  </footer>
 
   <%= source_helper("technology") %>
+
 
   </body>
 </html>

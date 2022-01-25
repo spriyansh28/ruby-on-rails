@@ -1,28 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+   <div class="row">
+      <div class="col-md-7">
+         <%= image_tag @technology.main_image if !@technology.main_image.nil?%>
+      </div>
+      <div class="col-md-5">
+         <h1>
+           <%= @technology.title %>
+         </h1>
+         
+         <hr>
+           <h6> <%= @technology.subtitle %> </h6>
+         
+         <p>
+           <%= @technology.body %>
+         </p>
+         </hr>
 
-<p>
-<%= image_tag @technology.main_image if !@technology.main_image.nil?%>
-</p>
-
-<h2>
-  <%= @technology.title %>
-</h2>
-
-<h3>
-  <%= @technology.subtitle %>
-</h3>
-
-<p>
-  <%= @technology.body %>
-</p>
-
-<h3> Technologies Used: </h3>
-<% @technology.items.each do |i|%>
-  <p><%= i.name %> </p>
-<% end %> 
+         <h3> Technologies Used: </h3>
+         <% @technology.items.each do |i|%>
+           <p><%= i.name %> </p>
+         <% end %>   
+         
+         <%= link_to 'Edit', edit_technology_path(@technology) %> |
+         <%= link_to 'Back', technologies_path %>
+      </div>
+    </div>
+</div>
 
 
-<%= link_to 'Edit', edit_technology_path(@technology) %> |
-<%= link_to 'Back', technologies_path %>
 
 

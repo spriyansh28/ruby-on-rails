@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy toggle_status]
   layout "post"
+
+
+# one other option that might seem a bit weird is to put a group of roles in an array:
   
   # GET /posts or /posts.json
   def index
