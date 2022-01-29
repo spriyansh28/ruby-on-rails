@@ -3,7 +3,7 @@ class TechnologiesController < ApplicationController
 
   layout "technology"
     def index
-        @technologies = Technology.all 
+        @technologies = Technology.order("position ASC")
         @page_title = "My Technologies"
     end
 

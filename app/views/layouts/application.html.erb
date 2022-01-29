@@ -16,6 +16,14 @@
   
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">  
 
+    <%= video_tag(
+      'bc_vid_1.mp4',
+      id: 'background',
+      autoplay: true,
+      loop: true,
+      muted: true,
+      poster: 'backgroud_img_earth.jpg'
+    )%>
     <%= render "shared/application_nav" %>
     
     <%= yield %>
