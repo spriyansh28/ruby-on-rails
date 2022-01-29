@@ -1,6 +1,6 @@
 class Technology < ApplicationRecord
     has_many :items
-    accepts_nested_attributes_for :items, reject_if: lambda { |attrs| attrs['name'].blank? }
+    accepts_nested_attributes_for :items, allow_destroy: true, reject_if: lambda { |attrs| attrs['name'].blank? }
     enum status: {draft: 0, published: 1}
 
     validates_presence_of :title, :body, :thumb_image, :main_image 

@@ -8,9 +8,10 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-//= require jquery3
 //= require jquery_ujs
 //= require_tree .
+require("jquery")
+require("@nathanvda/cocoon")
 //= require popper
 //= require bootstrap-sprockets
 

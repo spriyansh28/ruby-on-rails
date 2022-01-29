@@ -262,7 +262,7 @@ DEPENDENCIES
   byebug
   carrierwave (~> 2.2, >= 2.2.2)
   carrierwave-aws (~> 1.5)
-  cocoon (~> 1.2, >= 1.2.15)
+  cocoon (~> 1.2, >= 1.2.9)
   devise (~> 4.7, >= 4.7.3)
   dotenv-rails (~> 2.7, >= 2.7.6)
   font-awesome-rails (~> 4.7, >= 4.7.0.8)
