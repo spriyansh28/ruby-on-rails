@@ -5,6 +5,9 @@ class Technology < ApplicationRecord
 
     validates_presence_of :title, :body, :thumb_image, :main_image 
 
+    mount_uploader :thumb_image, TechnologyUploader
+    mount_uploader :main_image, TechnologyUploader
+    
     after_initialize :set_defaults
 
     def set_defaults

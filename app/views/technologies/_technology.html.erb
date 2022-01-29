@@ -1,6 +1,6 @@
 <div class="col">
     <div class="card shadow-sm">
-    <%= image_tag technology.thumb_image if !technology.thumb_image.nil?%>
+    <%= image_tag technology.thumb_image.url unless technology.thumb_image.url.nil? %>
     
       <div class="card-body">
         <div class="card-text">
