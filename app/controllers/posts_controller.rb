@@ -13,6 +13,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @post = Post.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
+    
     @page_title = @post.title
   end
 

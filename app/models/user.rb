@@ -7,6 +7,8 @@ class User < ApplicationRecord
   petergate(roles: [:site_admin, :editor], multiple: false)                                      ##
   ############################################################################################ 
  
+  validates_presence_of :first_name, :last_name
+  has_many :comments, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

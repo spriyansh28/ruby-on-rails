@@ -4,26 +4,22 @@
 // that code so it'll be compiled.
 
 //= require_self
-
 //= require jquery3
+require("jquery")
+require("@nathanvda/cocoon")
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery-ui+
 //= require sortable
 //= require popper
-//= require_tree .
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-//= require jquery_ujs
+//= require cable
 //= require_tree .
-require("jquery")
-require("@nathanvda/cocoon")
-//= require popper
-//= require bootstrap-sprockets
 
 Rails.start()
 Turbolinks.start()
