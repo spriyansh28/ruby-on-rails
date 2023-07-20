@@ -1,13 +1,18 @@
-# Online Posts Manager
-> This is a Ruby on Rails web application that allows users to create and handle their posts.
+## Post Manager
 
-### Features
-- Posts
-- Tech News
-- Real time chat engine for comments with user ids
-- Admin privilages to user with password protected accounts.
-- Secutrity to user posts which can only be posted and edited by the author.
-- Draft and post mode abailablity.
-- Drag and drop GUI.
-- API for lates news.
+This is a Ruby on Rails web application that allows users to create and share Posts and collaborate on writing Blogs
 
+### The app has the following functionalities:
+* User authentication
+* User authorization
+* Relational Database
+* Pick and Drop feature
+* Live Data factoring(Comments)
+* API for reading news
+* SignIn and SignUp pages
+
+### Things Learned:
+* Git version control
+* Proper way of working on a project
+* Use of embedded Ruby in HTML and CSS
+* Using Bootstrap for designing frontend
